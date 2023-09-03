@@ -53,6 +53,10 @@ while True:
     elif key == ord(' '):
         waiting_for_space = True  # Wait for the next space bar press
         current_player = 1 - current_player  # Toggle player
+        print(f"Player {current_player + 1} recorded a hand sign.")
+    elif key == 13:  # Check for Enter key (key code 13)
+        current_player = 1 - current_player  # Toggle player
+        print(f"Player {current_player + 1} is now active.")
 
 video.release()
 cv2.destroyAllWindows()
